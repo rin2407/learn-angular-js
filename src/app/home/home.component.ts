@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   public name: string = 'Nguyen Van A';
-  public age: number = 10;
+  public age;
   public listName: any = ['Nguyen Van B', 'Nguyen Van D', 'Nguyen Van F'];
-  public increaseAge() {
-    this.age = this.age + 1;
+  constructor(private common: CommonService) {
+    this.age = common.age;
   }
-  constructor() {}
+
+  public increaseAge() {
+    this.common.age++;
+    this.age = this.common.age;
+  }
 
   ngOnInit(): void {
     this.name = 'Nguyen van B';

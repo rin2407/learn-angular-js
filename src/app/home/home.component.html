@@ -6,7 +6,7 @@
 <button (click)='increaseAge()'>increaseAge</button>
 <div>
     <span *ngIf='age >= 18 then condition1 else condition2'></span>
-    <ng-template #condition1 >ban tren 18 tuoi</ng-template>
+    <ng-template #condition1 ><span appBold >ban tren 18 tuoi</span></ng-template>
     <ng-template #condition2 >ban duoi 18 tuoi</ng-template>
 </div>
 <div>list</div>

@@ -1,4 +1,10 @@
 <div>
   learn angular js
 </div>
-<app-home></app-home>
+<div>
+  <a [routerLink]="['/home']" routerLinkActive="router-link-active" >Go to home</a>
+</div>
+<div>
+  <a [routerLink]="['/about']" routerLinkActive="router-link-active" >Go to about</a>
+</div>
+<router-outlet></router-outlet>
