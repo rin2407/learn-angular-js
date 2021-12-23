@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
+import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'form', component: FormComponent },
   { path: 'reactive-form', component: ReactiveFormComponent },
+  { path: 'profile-form', component: ProfileEditComponent },
 ];
 
 @NgModule({

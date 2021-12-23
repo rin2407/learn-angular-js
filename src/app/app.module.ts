@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { BoldDirective } from './Directives/bold.directive';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     BoldDirective,
     FormComponent,
     ReactiveFormComponent,
+    ProfileEditComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
