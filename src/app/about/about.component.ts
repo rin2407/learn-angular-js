@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../Services/common.service';
+import { ServiceHttpService } from '../Services/service-http.service';
 
 @Component({
   selector: 'app-about',
@@ -8,9 +9,17 @@ import { CommonService } from '../Services/common.service';
 })
 export class AboutComponent implements OnInit {
   public age;
-  constructor(private common: CommonService) {
+  constructor(
+    private common: CommonService,
+    private serveHttp: ServiceHttpService
+  ) {
     this.age = common.age;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.serveHttp.getProfile().subscribe((data) => {
+      console.log(data);
+      this.age = data?.age;
+    });
+  }
 }
