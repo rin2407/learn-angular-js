@@ -1,39 +1,38 @@
 <p>profile-edit works!</p>
-  <div>
-    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<div>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="first-name">First Name: </label>
+      <input id="first-name" type="text" formControlName="firstName" />
+    </div>
 
-       <div>
-        <label for="first-name">First Name: </label>
-        <input id="first-name" type="text" formControlName="firstName">
-       </div>
-      
-       <div>
-        <label for="last-name">Last Name: </label>
-        <input id="last-name" type="text" formControlName="lastName">
-       </div>
-        <div formGroupName="address">
-            <h2>Address</h2>
-          
-           <div>
-            <label for="street">Street: </label>
-            <input id="street" type="text" formControlName="street">
-           </div>
-          
-           <div>
-            <label for="city">City: </label>
-            <input id="city" type="text" formControlName="city">
-           </div>
-          
-            <div>
-                <label for="state">State: </label>
-            <input id="state" type="text" formControlName="state">
-            </div>
-    
-           <div>
-            <label for="zip">Zip Code: </label>
-            <input id="zip" type="text" formControlName="zip">
-           </div>
-          </div>
-        <button type="submit">submit</button>
-      </form>
+    <div>
+      <label for="last-name">Last Name: </label>
+      <input id="last-name" type="text" formControlName="lastName" />
+    </div>
+    <div formGroupName="address">
+      <h2>Address</h2>
+
+      <div>
+        <label for="street">Street: </label>
+        <input id="street" type="text" formControlName="street" />
+      </div>
+
+      <div>
+        <label for="city">City: </label>
+        <input id="city" type="text" formControlName="city" />
+      </div>
+
+      <div>
+        <label for="state">State: </label>
+        <input id="state" type="text" formControlName="state" />
+      </div>
+
+      <div>
+        <label for="zip">Zip Code: </label>
+        <input id="zip" type="text" formControlName="zip" />
+      </div>
+    </div>
+    <button type="submit">submit</button>
+  </form>
 </div>

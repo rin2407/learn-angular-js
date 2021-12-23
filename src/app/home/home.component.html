@@ -1,18 +1,16 @@
 <p>home works!</p>
-<div>
-    name : {{ name  | uppercase }}
-</div>
+<div>name : {{ name | uppercase }}</div>
 <div>tuoi: {{ age }}</div>
-<button (click)='increaseAge()'>increaseAge</button>
+<button (click)="increaseAge()">increaseAge</button>
 <div>
-    <span *ngIf='age >= 18 then condition1 else condition2'></span>
-    <ng-template #condition1 ><span appBold >ban tren 18 tuoi</span></ng-template>
-    <ng-template #condition2 >ban duoi 18 tuoi</ng-template>
+  <span *ngIf="age >= 18; then condition1; else condition2"></span>
+  <ng-template #condition1><span appBold>ban tren 18 tuoi</span></ng-template>
+  <ng-template #condition2>ban duoi 18 tuoi</ng-template>
 </div>
 <div>list</div>
 <div class="aaaaa" *ngFor="let item of listName">
-    {{ item }}
+  {{ item }}
 </div>
 <div>
-    <input [(ngModel)]="name" />
+  <input [(ngModel)]="name" />
 </div>

@@ -1,23 +1,21 @@
-<form (ngSubmit) = "onSubmit()" #myForm="ngForm">
-    <div>
-        form
-    </div>
-    <div>
-        <div>Name</div>
-        <input id='name' [(ngModel)]="name" name="name" required />
-        <div *ngIf="name ===''">Nhap ten</div>
-    </div>
-    <div>
-        <div>Password</div>
-        <input id='password' [(ngModel)]="password" name="password" required/>
-    </div>
-    <div>Select</div>
-    <div>
-        <select (change)='onChange($event)'>
-            <option>choose1</option>
-            <option>choose2</option>
-            <option>choose3</option>
-        </select>
-    </div>
-    <button type="='submit" [disabled] ='!myForm.form.valid'>ok</button>
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <div>form</div>
+  <div>
+    <div>Name</div>
+    <input id="name" [(ngModel)]="name" name="name" required />
+    <div *ngIf="name === ''">Nhap ten</div>
+  </div>
+  <div>
+    <div>Password</div>
+    <input id="password" [(ngModel)]="password" name="password" required />
+  </div>
+  <div>Select</div>
+  <div>
+    <select (change)="onChange($event)">
+      <option>choose1</option>
+      <option>choose2</option>
+      <option>choose3</option>
+    </select>
+  </div>
+  <button type="='submit" [disabled]="!myForm.form.valid">ok</button>
 </form>

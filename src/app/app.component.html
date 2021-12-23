@@ -1,19 +1,27 @@
+<div>learn angular js</div>
 <div>
-  learn angular js
+  <a [routerLink]="['/home']" routerLinkActive="router-link-active"
+    >Go to home</a
+  >
 </div>
 <div>
-  <a [routerLink]="['/home']" routerLinkActive="router-link-active" >Go to home</a>
+  <a [routerLink]="['/about']" routerLinkActive="router-link-active"
+    >Go to about</a
+  >
 </div>
 <div>
-  <a [routerLink]="['/about']" routerLinkActive="router-link-active" >Go to about</a>
+  <a [routerLink]="['/form']" routerLinkActive="router-link-active"
+    >Go to form</a
+  >
 </div>
 <div>
-  <a [routerLink]="['/form']" routerLinkActive="router-link-active" >Go to form</a>
+  <a [routerLink]="['/reactive-form']" routerLinkActive="router-link-active"
+    >Go to reactive-form</a
+  >
 </div>
 <div>
-  <a [routerLink]="['/reactive-form']" routerLinkActive="router-link-active" >Go to reactive-form</a>
-</div>
-<div>
-  <a [routerLink]="['/profile-form']" routerLinkActive="router-link-active" >profile form</a>
+  <a [routerLink]="['/profile-form']" routerLinkActive="router-link-active"
+    >profile form</a
+  >
 </div>
 <router-outlet></router-outlet>
