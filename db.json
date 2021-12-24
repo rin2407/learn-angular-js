@@ -1,5 +1,35 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode","age": 20 }
+  "posts": [
+    {
+      "id": 1,
+      "title": "post 1",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "post 2",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment 1 post 1",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment 2 post 1",
+      "postId": 1
+    },
+    {
+      "id": 3,
+      "body": "some comment 3 post 1",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "Nguyen Van A",
+    "age": 20
+  }
 }

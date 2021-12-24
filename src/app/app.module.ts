@@ -11,6 +11,7 @@ import { FormComponent } from './form/form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChildrenComponent } from './children/children.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormComponent,
     ReactiveFormComponent,
     ProfileEditComponent,
+    ChildrenComponent,
   ],
   imports: [
     BrowserModule,
