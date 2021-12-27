@@ -2,5 +2,9 @@
 <div>Hello : {{name}}</div>
 <div>age : {{ age }}</div>
 <button (click)="increment()">Increment</button>
-
 <app-children [count]=counter></app-children>
+<button (click)="addPost()">Add post</button>
+<div>List post</div>
+<div>
+    <div *ngFor="let item of posts">{{item?.title}}</div>
+ </div>
