@@ -19,6 +19,7 @@ export class ServiceHttpService {
     }),
   };
   private REST_API_SERVE = 'http://localhost:3000';
+
   constructor(private httpClient: HttpClient) {}
   public getProfile(): Observable<any> {
     const url = `${this.REST_API_SERVE + '/profile'}`;
@@ -26,24 +27,28 @@ export class ServiceHttpService {
       .get<any>(url, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
   public getCommment(): Observable<any> {
     const url = `${this.REST_API_SERVE + '/comments'}`;
     return this.httpClient
       .get<any>(url, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
   public getPosts(): Observable<any> {
     const url = `${this.REST_API_SERVE + '/posts'}`;
     return this.httpClient
       .get<any>(url, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
   public addPosts(data: any) {
     const url = `${this.REST_API_SERVE}/posts`;
     return this.httpClient
       .post<any>(url, data, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
       // A client-side or network error occurred. Handle it accordingly.
